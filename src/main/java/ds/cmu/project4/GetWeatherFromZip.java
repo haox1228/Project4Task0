@@ -10,12 +10,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class GetWeatherFromZip {
     public static void main(String[] args) {
         //zip code
-        String zip = "15203";
-        String url = "https://api.interzoid.com/getweatherzipcode?zip=";
-        String apiKey = "928439cb99c101461df3c06b1c05f911";
+        String movie = "Inception 2010";
+        String url = "https://imdb-api.com/en/API/SearchMovie/k_46acfnj9/inception%202010";
+        String apiKey = "k_46acfnj9";
         // create the request with the API end point and parameters
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url+zip))
+                .uri(URI.create(url))
                 .header("content-type", "application/json")
                 .header("x-api-key", apiKey)
                 .method("GET", HttpRequest.BodyPublishers.noBody())
